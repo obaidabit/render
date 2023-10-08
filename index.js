@@ -5,7 +5,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   console.log("Starting node cron");
-  const task = nodeCron.schedule("* * * * * *", (d) => {
+  const task = nodeCron.schedule("* * * * *", (d) => {
     console.log("Running a task every minute");
     console.log(new Date());
   });
